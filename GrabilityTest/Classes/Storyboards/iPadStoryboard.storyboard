@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xh6-yT-rT1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AMR-nv-YF7">
+            <objects>
+                <navigationController id="Xh6-yT-rT1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y8d-NL-PdH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EJE-uW-Y7U" kind="relationship" relationship="rootViewController" id="d2M-Q1-mRW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkt-MJ-Gbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="437"/>
+        </scene>
+        <!--Categorias-->
+        <scene sceneID="oHe-95-yK8">
+            <objects>
+                <collectionViewController id="EJE-uW-Y7U" customClass="CategoryCollectionViewController" customModule="GrabilityTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SXJ-Cf-Ges">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sdt-Xx-Nzl">
+                            <size key="itemSize" width="350" height="350"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="59o-4O-X7C" customClass="CategoryCollectionViewCell" customModule="GrabilityTest" customModuleProvider="target">
+                                <rect key="frame" x="125" y="64" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7J-40-wbj">
+                                            <rect key="frame" x="8" y="164" width="334" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="T7J-40-wbj" firstAttribute="leading" secondItem="59o-4O-X7C" secondAttribute="leadingMargin" id="7B7-Jq-jQ5"/>
+                                    <constraint firstItem="T7J-40-wbj" firstAttribute="trailing" secondItem="59o-4O-X7C" secondAttribute="trailingMargin" id="AUv-W6-Kt8"/>
+                                    <constraint firstItem="T7J-40-wbj" firstAttribute="top" secondItem="59o-4O-X7C" secondAttribute="topMargin" constant="156" id="jkt-BM-hwf"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="T7J-40-wbj" secondAttribute="bottom" constant="157" id="tsG-qA-bK2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="T7J-40-wbj" id="VIw-sJ-v97"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="EJE-uW-Y7U" id="ZBE-Jv-uHg"/>
+                            <outlet property="delegate" destination="EJE-uW-Y7U" id="ZdO-yl-N58"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Categorias" id="pO2-sC-Rao"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wpf-6F-DnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="437"/>
+        </scene>
+        <!--Aplicaciones-->
+        <scene sceneID="Pbg-3Q-qiB">
+            <objects>
+                <collectionViewController storyboardIdentifier="ApplicationPadViewController" title="Aplicaciones" id="wqg-B7-7od" customClass="ApplicationPadViewController" customModule="GrabilityTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Z6h-aI-bhM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IcO-6J-76w">
+                            <size key="itemSize" width="350" height="350"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ApplicationCollectionViewCell" id="i9P-6X-v5V" customClass="ApplicationCollectionViewCell" customModule="GrabilityTest" customModuleProvider="target">
+                                <rect key="frame" x="125" y="0.0" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-BJ-Dxn">
+                                            <rect key="frame" x="65" y="43" width="220" height="220"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="220" id="bfp-Lx-gcH"/>
+                                                <constraint firstAttribute="height" constant="220" id="ojK-bQ-7BG"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAt-Sm-bXW">
+                                            <rect key="frame" x="8" y="286" width="334" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="MKl-BJ-Dxn" firstAttribute="top" secondItem="i9P-6X-v5V" secondAttribute="topMargin" constant="35" id="1mD-Un-qGw"/>
+                                    <constraint firstItem="MKl-BJ-Dxn" firstAttribute="leading" secondItem="i9P-6X-v5V" secondAttribute="leadingMargin" constant="57" id="Y5K-YD-flZ"/>
+                                    <constraint firstItem="GAt-Sm-bXW" firstAttribute="top" secondItem="MKl-BJ-Dxn" secondAttribute="bottom" constant="23" id="cfz-wB-kcW"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MKl-BJ-Dxn" secondAttribute="trailing" constant="57" id="f2W-iI-3s7"/>
+                                    <constraint firstItem="GAt-Sm-bXW" firstAttribute="trailing" secondItem="i9P-6X-v5V" secondAttribute="trailingMargin" id="icb-IM-Qfz"/>
+                                    <constraint firstItem="GAt-Sm-bXW" firstAttribute="leading" secondItem="i9P-6X-v5V" secondAttribute="leadingMargin" id="mEq-1i-0DH"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="GAt-Sm-bXW" secondAttribute="bottom" constant="35" id="wNE-j2-sqn"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="applicationImage" destination="MKl-BJ-Dxn" id="3EF-8H-QhK"/>
+                                    <outlet property="applicationLabel" destination="GAt-Sm-bXW" id="PRU-6t-a3t"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="wqg-B7-7od" id="2wt-gz-OZN"/>
+                            <outlet property="delegate" destination="wqg-B7-7od" id="0ct-bY-ItS"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="784-dV-1Ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="442"/>
+        </scene>
+    </scenes>
+</document>
